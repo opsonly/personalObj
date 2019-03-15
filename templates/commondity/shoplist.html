@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% load staticfiles %}
+{% block content %}
+       <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">商品名</th>
+      <th scope="col">商店名称</th>
+      <th scope="col"> 评论数量</th>
+      <th scope="col">价格表</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for shop in shoplist %}
+    <tr>
+      <th scope="row"><img width="200" height="150" src={{ shop.image }}></th>
+      <td>{{ shop.commonName }}</td>
+      <td><a href={{ shop.shopurl }}>{{ shop.shopname }}</a></td>
+      <td>{{ shop.commonNum }}</td>
+      <td>{{ shop.price }}</td>
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+
+{% endblock content %}

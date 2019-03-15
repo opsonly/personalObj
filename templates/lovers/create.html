@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% load static %}
+
+{% block content %}
+
+{% for lo in lover %}
+
+
+     {% if lo.loveimg %}
+            <div class="col-3">
+                <img style="height: 150px;width: 150px" src="{{ lo.loveimg.url }}">
+                <br>
+                <a href="{% url 'lovers:songer' lo.lovecate %}" class="btn btn-info btn-lg active" role="button" aria-pressed="true">{{ lo.lovecate }}</a>
+            </div>
+
+
+     {% endif %}
+{% endfor %}
+
+
+{% endblock content %}

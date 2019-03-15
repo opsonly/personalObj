@@ -1,0 +1,31 @@
+.x_top {
+    height: 30px;
+    line-height: 30px;
+}
+
+.x_top .top_fixed {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 300;
+    background-color: #0ABBAB;
+}
+
+
+.x_top .top_nav {
+    width: 960px;
+    margin: 0px auto;
+    color: #FFF;
+}
+
+
+
+.x_top .nav_mmz {
+    margin-top: 2px;
+    background-color: #FFF;
+    height: 28px;
+    line-height: 28px;
+    display: block;
+    padding: 0px 15px;
+}

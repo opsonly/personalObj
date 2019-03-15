@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% load static %}
+
+{% block content %}
+
+         <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">#</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for song in songli %}
+    <tr>
+        <td>{{ song.songername }}</td>
+        <td><a href="{% url 'lovers:comment' song.songid song.musicname %}" role="button" aria-pressed="true" class="btn btn-success btn-sm">{{ song.musicname }}</a></td>
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+
+{% endblock content %}
+

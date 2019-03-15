@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% load static %}
+
+{% block content %}
+
+         <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">BlogName</th>
+      <th scope="col">Commit</th>
+      <th scope="col">Category</th>
+      <th scope="col">UpdateTime</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for tag in tagl %}
+    <tr>
+        <td><a href="{% url 'blog:detail' tag.id %}" role="button" aria-pressed="true" class="btn btn-success btn-sm">{{ tag.name }}</a></td>
+        <td>{{ tag.commit }}</td>
+        <td><button type="button" class="btn btn-info btn-sm">{{ tag.category }}</button></td>
+        <td><span class="badge badge-pill badge-primary">{{ tag.update_time }}</span></td>
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+
+{% endblock content %}

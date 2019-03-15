@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% load static %}
+
+{% block content %}
+
+         <table class="table">
+  <thead>
+
+      <div class="alert alert-primary" role="alert"><h3 class="text-center">{{ songname }}</h3></div>
+
+  </thead>
+  <tbody>
+  {% for comment in comlist %}
+    <tr>
+        <td><img style="width: 50px;height: 50px" src="{{ comment.avatarurl }}"><br><a href="#" class="badge badge-info">{{ comment.commenter }}</a></td>
+
+            <td><div class="alert alert-dark" role="alert">{{ comment.comment }}</div></td>
+
+            <td><span class="badge badge-pill badge-success">{{ comment.likedcount }}</span></td>
+
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+
+{% endblock content %}
+

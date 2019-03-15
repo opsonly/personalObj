@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% load static %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/code.css' %}">  {#语法高亮#}
+
+<h1 class="text-center">{{ bglist.name }}</h1>
+
+<div class="alert alert-primary" role="alert">
+    标签：<a href="{% url 'blog:tag' bglist.category %}" class="badge badge-pill badge-success">{{ bglist.category }}</a><br>
+    浏览量：{{ bglist.total_views }}
+</div>
+    <br>
+    <span class="container">
+        {{ bglist.content|safe }}
+
+    </span>
+
+ <h6 class="text-right"><span class="badge badge-pill badge-primary">{{ bglist.update_time }}</span></h6>
+
+
+{% endblock content %}
