@@ -22,7 +22,6 @@ from django.conf.urls.static import static
 
 from django.conf.urls import url, include
 
-import xadmin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
