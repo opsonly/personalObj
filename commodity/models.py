@@ -18,7 +18,7 @@ class commonDity(models.Model):
 
 class shopname(models.Model):
 
-    shop_name = models.CharField(max_length=100,default='null')
+    shop_name = models.CharField(max_length=100)
     common_id = models.IntegerField()
     commonNum = models.IntegerField()
     commonName = models.CharField(max_length=100,default='null')
